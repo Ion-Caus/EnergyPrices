@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergyPrices", "EnergyPrices\EnergyPrices.csproj", "{CF2422E1-5B67-4912-8364-C916BDB19DDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF2422E1-5B67-4912-8364-C916BDB19DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF2422E1-5B67-4912-8364-C916BDB19DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF2422E1-5B67-4912-8364-C916BDB19DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF2422E1-5B67-4912-8364-C916BDB19DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
