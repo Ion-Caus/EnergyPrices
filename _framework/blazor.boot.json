@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "EnergyPrices",
   "resources": {
-    "hash": "sha256-W+hYZjl8Y3QDGJqoG3kWZLF8HcZpYKTjDtcqBvh3BU8=",
+    "hash": "sha256-imc75Mzbrv+oZ6255pn/oCgdmu2j6/i1tCm6iltYZTQ=",
     "jsModuleNative": {
       "dotnet.native.8.0.11.lh4dhmwr5g.js": "sha256-U/AbaYqgVwGl7yleV2Uuhx1zttFb/FuyCj+B2iSbj8w="
     },
@@ -9,7 +9,7 @@
       "dotnet.runtime.8.0.11.lzlqtfpif6.js": "sha256-nam8JTYKjhMKOTg6+FlihYP6JpWPGe3jjM9fiUFWzhY="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-PW22TwfLveWOROKX6AACBrAa/EHFUbrz8ubbMuSrxso="
+      "dotnet.native.wasm": "sha256-1vDUOLdeJdyVTY68MxPts5QPfA1Sr6NkXqhGJpN2oOY="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
