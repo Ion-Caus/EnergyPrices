@@ -25,7 +25,7 @@ jobs:
       run: dotnet publish src -c Release -o release --nologo
 
     - name: Update base href for GitHub Pages
-      run: sed -i 's|<base href="/" />|<base href="/${{ github.repository }}/" />|' release/wwwroot/index.html
+      run: sed -i 's|<base href="/" />|<base href="/'$REPO_NAME'/" />|' release/wwwroot/index.html
 
     - name: Add .nojekyll file
       run: touch release/wwwroot/.nojekyll
