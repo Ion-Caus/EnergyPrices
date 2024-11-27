@@ -22,7 +22,7 @@ jobs:
       run: dotnet workload install wasm-tools
 
     - name: Build Project
-      run: dotnet publish -c Release -o release --nologo
+      run: dotnet publish src -c Release -o release --nologo
 
     - name: Update base href for GitHub Pages
       run: sed -i 's|<base href="/" />|<base href="/${{ github.repository }}/" />|' release/wwwroot/index.html
