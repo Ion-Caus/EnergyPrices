@@ -6,7 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <RunAOTCompilation>true</RunAOTCompilation>
         <PublishTrimmed>true</PublishTrimmed>
-        <WasmStripILAfterAOT>true</WasmStripILAfterAOT>
+        <WasmStripILAfterAOT>false</WasmStripILAfterAOT>
     </PropertyGroup>
 
     <ItemGroup>
