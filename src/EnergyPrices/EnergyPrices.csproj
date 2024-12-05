@@ -4,8 +4,8 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <RunAOTCompilation>true</RunAOTCompilation>
-        <PublishTrimmed>true</PublishTrimmed>
+        <RunAOTCompilation>false</RunAOTCompilation>
+        <PublishTrimmed>false</PublishTrimmed>
         <WasmStripILAfterAOT>false</WasmStripILAfterAOT>
     </PropertyGroup>
 

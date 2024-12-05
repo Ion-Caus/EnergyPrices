@@ -4,38 +4,38 @@ on:
   push:
     branches:
       - main
-    
+
 jobs:
   deploy-to-github-pages:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-    - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '8.0.x'
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "8.0.x"
 
-    - name: Install WebAssembly Tools
-      run: dotnet workload install wasm-tools
+      - name: Install WebAssembly Tools
+        run: dotnet workload install wasm-tools
 
-    - name: Build Project
-      run: dotnet publish src -c Release -o release --nologo
+      - name: Build Project
+        run: dotnet publish src -c Release -o release --nologo /p:RunAOTCompilation=true  /p:PublishTrimmed=true /p:PublishSingleFile=false
 
-    - name: Update base href for GitHub Pages
-      run: sed -i 's|<base href="/" />|<base href="\/EnergyPrices\/" />|' release/wwwroot/index.html
+      - name: Update base href for GitHub Pages
+        run: sed -i 's|<base href="/" />|<base href="\/EnergyPrices\/" />|' release/wwwroot/index.html
 
-    - name: Add .nojekyll file
-      run: touch release/wwwroot/.nojekyll
+      - name: Add .nojekyll file
+        run: touch release/wwwroot/.nojekyll
 
-    - name: Create 404.html for SPA Routing
-      run: cp release/wwwroot/index.html release/wwwroot/404.html
+      - name: Create 404.html for SPA Routing
+        run: cp release/wwwroot/index.html release/wwwroot/404.html
 
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages
-        folder: release/wwwroot
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: release/wwwroot
